@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    height: 100%;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/*colors */
+
+:root{
+    --color-dark--: #1e1e1e;
+    --color-green--: #2DA44E;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    padding: 1%;
+    background-color: var(--color-dark--);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    border-radius: 10px;
+    background-color: var(--color-green--);
+}
+
+
+
+/*navs*/
+nav{
+    width: 100%;
+    padding: 1%;
+    background-color: var(--color-dark--);
+}
+
+nav .container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo{
+    width: 50%;
+}
+
+nav .container .logo img{
+    width: 143px;
+}
+
+nav .container .menu{
+    width: 30%;
+}
+
+@media screen and (min-width: 960px){
+    nav .container .menu{
+        width: 20%;
+    }
+}
+
+nav .container .menu ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+
+
+nav .container .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sign{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 20px;
+}
+
+.sign .title{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sign form{
+    width: 100%;
+}
+
+.sign form .input_wrapper{
+    width: 100%;
+    
+}
+
+.sign form .input_wrapper label{
+    cursor: pointer;
+    margin: 20px;
+}
+
+.sign form .input_wrapper input[type=file]{
+    display: none;
+}
+
+.sign form .input_wrapper .image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sign form .input_wrapper .image img{
+    width: 50%;
+    border-radius: 5px;
+}
+
+.sign form .input_wrapper fieldset{
+    padding: 2%;
+    border: none;
+}
+
+.sign form .input_wrapper fieldset legend{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.sign form .input_wrapper fieldset input[type=text],
+.sign form .input_wrapper fieldset input[type=email],
+.sign form .input_wrapper fieldset input[type=password]{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.sign form .input_wrapper fieldset input[type=text],
+.sign form .input_wrapper fieldset input[type=email],
+.sign form .input_wrapper fieldset input[type=password]:focus{
+    outline-color: var(--color-green--);
+}
+
+.sign form .input_wrapper fieldset input[type=submit]{
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-green--);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 960px){
+    .sign form{
+        width: 33%;
+    }
+}
+
+.add-ask{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 20px;
+}
+
+.add-ask form{
+    width: 100%;
+}
+
+.add-ask form .input_wrapper{
+    width: 100%;
+}
+
+.add-ask form .input_wrapper fieldset{
+    padding: 2%;
+    border: none;
+}
+
+.add-ask form .input_wrapper fieldset legend{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.add-ask form .input_wrapper fieldset input[type=text],
+.add-ask form .input_wrapper fieldset textarea{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    resize: none;
+    overflow: hidden;
+    padding: 2%;
+}
+
+.add-ask form .input_wrapper fieldset input[type=text],
+.add-ask form .input_wrapper fieldset textarea:focus{
+    outline-color: var(--color-green--);
+}
+
+.add-ask form .input_wrapper fieldset input[type=submit]{
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-green--);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 960px){
+    .add-ask form{
+        width: 33%;
+    }
+}
+
+/* feed */
+
+.feed-global{
+    width: 100%;
+    margin-top: 20px;
+    padding: 2%;
+}
+
+.feed-global .box-search{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.feed-global .box-search form{
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.feed-global .box-search form .input_wrapper{
+    width: 100%;
+    
+}
+
+@media screen and (min-width: 960px){
+    .feed-global .box-search form .input_wrapper{
+        width: 50%;
+        
+    }
+}
+
+.feed-global .box-search form .input_wrapper label{
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #c4c4c4;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+
+.feed-global .box-search form .input_wrapper input[type=text]{
+    width: 100%;
+    height: 40px;
+    padding: 2% 10%;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+
+
+.feed-global .box-search form .input_wrapper input[type=text]:focus{
+    outline-color: var(--color-green--);
+}
+
+.feed-global .container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+@media screen and (min-width: 960px){
+    .feed-global .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.box-post{
+    width: 100%;
+    padding: 2%;
+    background: linear-gradient(220.01deg, #1E1E1E -7.46%, #8B8B8B 109.7%);
+    border-radius: 5px;
+    color: #fff;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.box-post .title{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.box-post .autor{
+    font-size: 1.2rem;
+    margin-top: 10px;
+
+}
+
+.box-post .autor p span{
+    font-weight: 600;
+}
+
+
+.page-ask{
+    width: 100%;
+}
+
+.page-ask .container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+@media screen and (min-width: 960px){
+    .page-ask .container{
+        max-width: 960px;
+    }
+}
+
+.page-ask .container .ask{
+    
+    margin-top: 20px;
+}
+
+.page-ask .container .ask h1{
+    font-size: 2.7rem;
+    margin-top: 20px;
+}
+
+.page-ask .container .ask p{
+    font-size: 1.7rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.page-ask .container .ask span{
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+.page-ask .container .reply-form{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.page-ask .container .reply-form a{
+    font-size: 1.5rem;
+    color: var(--color-dark--);
+    
+}
+
+
+
+.page-ask .container .reply-form form{
+    width: 100%;
+}
+
+@media screen and (min-width: 960px){
+    .page-ask .container .reply-form form{
+        width: 50%;
+    }
+
+}
+
+.page-ask .container .reply-form .input_wrapper{
+    width: 100%;
+}
+
+.page-ask .container .reply-form .input_wrapper fieldset{
+    padding: 2%;
+    border: none;
+}
+
+.page-ask .container .reply-form .input_wrapper fieldset legend{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+.page-ask .container .reply-form .input_wrapper fieldset textarea{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    resize: none;
+    overflow: hidden;
+    padding: 1%;
+}
+
+
+.page-ask .container .input_wrapper fieldset textarea:focus{
+    outline-color: var(--color-green--);
+}
+
+.page-ask .container .input_wrapper fieldset input[type=submit]{
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-green--);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-ask .container .replys{
+    margin-top: 5%;
+}
+
+.page-ask .container .replys h1{
+    margin-bottom: 20px;
+}
+
+.page-ask .container .replys .box-reply{
+    padding: 2%;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #c4c4c4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.me{
+    width: 100%;
+}
+
+.me .container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+@media screen and (min-width: 960px){
+    .me .container{
+        max-width: 540px;
+    }
+}
+
+.me .container .icon{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--color-dark--);
+    margin-top:20px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+}
+
+.me .container .name{
+    font-size: 1.5rem;
+    margin-top:30px;
+}
+
+.me .container .buttons{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.me .container .buttons a{
+    margin: 10px;
+}
+
+.me .container .buttons a:nth-of-type(1){
+    width: 50%;
+    height: 40px;
+    background-color: var(--color-green--);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    
+}
+
+.me .container .buttons a:nth-of-type(2){
+    width: 50%;
+    height: 40px;
+    border: 2px solid var(--color-green--);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-green--);
+    border-radius: 5px;
+    
+}
+
+.me .container .asks{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}

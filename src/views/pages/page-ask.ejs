@@ -1,0 +1,51 @@
+<%- include('../include/header.ejs') %> 
+
+<div class="page-ask">
+    <div class="container">
+        <div class="ask">
+            <h1><%= asks[0].title %> </h1>
+            <p>
+                <%= asks[0].ask %> 
+            </p>
+            <span><strong>Perguntado por:</strong> <%= users[0].nome %> <%= users[0].sobrenome %>  </span>
+        </div>
+        <div class="reply-form">
+        <% if (loggedin) { %>
+            <form action="/page-ask/<%= asks[0].id %> " method="post" id="reply-form">
+                <div class="input_wrapper">
+                    <fieldset>
+                        <legend>Responder pergunta</legend>
+                        <textarea name="reply" id="reply" required></textarea>
+                    </fieldset>
+                </div>
+                <div class="input_wrapper">
+                    <fieldset>
+                        <input type="submit" value="Responder">
+                    </fieldset>
+                </div>
+            </form>
+        <% }else{ %>
+            <h3><a href="/signIn">Entre para poder responder está <span>pergunta</span></a></h3>
+        <% } %>
+            
+        </div>
+
+        <div class="replys">
+            <h1>Respostas: <%= count %> </h1>
+            <% replys.forEach(val => { %>
+                <div class="box-reply">
+                    <span><strong>Respondido por:</strong> <%= val.nome %> <%= val.sobrenome %> </span>
+                    <br />
+                    <br>
+                    <p>
+                        <%= val.reply %> 
+                    </p>
+                </div>
+            <% }) %>
+            
+            
+        </div>
+    </div>
+</div>
+
+<script src="/js/resizeText.js"></script>

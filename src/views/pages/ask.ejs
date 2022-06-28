@@ -1,0 +1,25 @@
+<%- include('../include/header.ejs') %> 
+
+<div class="add-ask">
+    <form action="/add-ask" method="post">
+        <div class="input_wrapper">
+            <fieldset>
+                <legend>Titulo da Pergunta</legend>
+                <input type="text" name="title" required>
+            </fieldset>
+        </div>
+        <div class="input_wrapper">
+            <fieldset>
+                <legend>Pergunta</legend>
+                <textarea name="ask" required></textarea>
+            </fieldset>
+        </div>
+        <div class="input_wrapper">
+            <fieldset>
+                <input type="submit" value="Perguntar">
+            </fieldset>
+        </div>
+    </form>
+</div>
+
+<script src="/js/resizeText.js"></script>

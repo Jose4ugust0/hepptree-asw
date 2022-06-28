@@ -1,0 +1,26 @@
+<%- include('../include/header.ejs') %> 
+
+<div class="sign">
+    <div class="title">
+        <h1>Entrar</h1>
+    </div>
+    <form action="/signIn" method="post">
+        <div class="input_wrapper">
+            <fieldset>
+                <legend>Email</legend>
+                <input type="email" name="email" required />
+            </fieldset>
+        </div>
+        <div class="input_wrapper">
+            <fieldset>
+                <legend>Senha</legend>
+                <input type="password" name="password" required />
+            </fieldset>
+        </div>
+        <div class="input_wrapper">
+            <fieldset>
+                <input type="submit" value="Entrar">
+            </fieldset>
+        </div>
+    </form>
+</div>

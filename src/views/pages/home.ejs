@@ -1,0 +1,29 @@
+<%- include('../include/header.ejs') %> 
+
+<div class="feed-global">
+    <% if (loggedin) { %>
+        <div class="box-search">
+            <form action="/search" method="get">
+                <div class="input_wrapper">
+                    <label><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="text" name="search">
+                </div>
+            </form>
+        </div>
+    <% } %>
+    
+    <div class="container">
+            <% feed.forEach(val => { %>
+                <a href="/page-ask/<%= val.id %> " class="box-post">
+                    <div class="title">
+                        <h1><%= val.title %> </h1>
+                    </div>
+                    
+                    
+                </a>
+            <% }) %>
+            
+       
+        
+    </div>
+</div>

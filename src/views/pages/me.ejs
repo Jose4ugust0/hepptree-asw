@@ -1,0 +1,36 @@
+<%- include('../include/header.ejs') %> 
+
+<div class="me">
+    <div class="container">
+        <% if (icon == null) { %>
+            <div class="icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        <% }else { %>
+            <div class="icon" style="background-image: url('/uploads/peoples/icons/<%= icon %>')">
+                
+            </div>
+        <% } %>
+        
+        <div class="name">
+            <h1><%= nome %> <%= sobrenome %> </h1>
+        </div>
+        <div class="buttons">
+            <a class="edit-profile" href="/me/edit-profile"><i class="fa-solid fa-pen"></i>Editar perfil</a>
+            <a class="edit-icon" href="/me/edit-icon"><i class="fa-solid fa-pen"></i>Editar Icone</a>
+        </div>
+        <div class="asks">
+            <h2>Perguntas feitas: <%= count %> </h2>
+            <br>
+            <% feed.forEach(val => { %>
+                <a href="/page-ask/<%= val.id %> " class="box-post">
+                    <div class="title">
+                        <h1><%= val.title %> </h1>
+                    </div>
+                    
+                    
+                </a>
+            <% }) %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<%- include('../include/header.ejs') %> 
+
+<div class="sign">
+    <div class="title">
+        <h1>Editar perfil</h1>
+    </div>
+     <form action="/me/edit-profile" method="post">
+        <div class="input_wrapper">
+            <fieldset>
+                <legend>Nome</legend>
+                <input
+                 type="text"
+                 name="name"
+                 value="<%= nome %> "
+                 required
+                />
+            </fieldset>
+        </div>
+        <div class="input_wrapper">
+            <fieldset>
+                <legend>Sobrenome</legend>
+                <input
+                 type="text"
+                 name="lastName"
+                 value="<%= sobrenome %> "
+                 required
+                />
+            </fieldset>
+        </div>
+        <div class="input_wrapper">
+            <fieldset>
+                <legend>Email</legend>
+                <input
+                 type="email"
+                 name="email"
+                 value="<%= email %> "
+                 required
+                />
+            </fieldset>
+        </div>
+        <div class="input_wrapper">
+            <fieldset>
+                <input type="submit" value="Atualizar">
+            </fieldset>
+            
+        </div>
+    </form>
+</div>
